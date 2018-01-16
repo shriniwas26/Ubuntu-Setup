@@ -391,6 +391,7 @@ gir1.2-wnck-3.0:amd64				install
 gisomount					install
 git						install
 git-cola					install
+git-lfs						install
 git-man						install
 gitk						install
 gitkraken					install
