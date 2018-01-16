@@ -173,7 +173,6 @@ docker.io					install
 dosfstools					install
 dpkg						install
 dpkg-dev					install
-drive						install
 dropbox						install
 duplicity					install
 dvidvi						install
@@ -435,12 +434,6 @@ gnome-weather					install
 gnupg						install
 gnupg-agent					install
 gnupg2						install
-golang-1.6-go					install
-golang-1.6-race-detector-runtime		install
-golang-1.6-src					install
-golang-go					install
-golang-race-detector-runtime			install
-golang-src					install
 google-chrome-stable				install
 gparted						install
 gpgv						install
@@ -2537,6 +2530,7 @@ thunderbird-locale-en-gb			install
 thunderbird-locale-en-us			install
 tidy						install
 time						install
+timeshift					deinstall
 tipa						install
 tk						install
 tk8.6						install
@@ -2623,6 +2617,7 @@ unity-scopes-master-default			install
 unity-scopes-runner				install
 unity-services					install
 unity-settings-daemon				install
+unity-tweak-tool				install
 unity-webapps-common				install
 unity-webapps-qml				install
 unity-webapps-service				install
