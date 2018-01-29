@@ -9,4 +9,4 @@
 # The distribution name sets the release channel you want to use,
 # which can be either "stable" or "preview"
 
-# deb https://desktop-download.mendeley.com/download/apt stable main
+deb https://desktop-download.mendeley.com/download/apt stable main
