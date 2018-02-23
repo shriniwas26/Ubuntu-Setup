@@ -1,5 +1,5 @@
 #!/bin/bash
-apt install -y git vim zsh git-cola tmux
+apt install -y vim git-cola tmux
 
 # Copy tmux conf
 cp ./.tmux.conf ~/
