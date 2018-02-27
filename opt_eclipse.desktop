@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Eclipse
+Comment=Eclipse Integrated Development Environment(copy this file in ~/.local/share/applications/opt_eclipse.desktop)
+Icon=/home/shriniwas/eclipse/rcp-oxygen/eclipse/icon.xpm
+Exec=/home/shriniwas/eclipse/rcp-oxygen/eclipse/eclipse
+Terminal=false
+Categories=Development;IDE;Java;Rascal;
+StartupWMClass=Eclipse
