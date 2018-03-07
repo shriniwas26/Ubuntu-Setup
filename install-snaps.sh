@@ -1,5 +1,6 @@
-SNAPS=$(cat snap.list)
-for SNAP in $SNAPS
+#!/bin/bash
+while read line
 do
-    snap install $SNAP
-done
+    echo "Trying to install snap : $line"
+    snap install $line
+done < snap.list
