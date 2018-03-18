@@ -1,6 +1,10 @@
 #!/bin/bash
 while read line
 do
-    echo "Trying to install snap : $line"
-    snap install $line
+    (
+        printf "Trying to install snap : $line \n" &&
+        snap install $line &&
+        printf "Installed snap $line \n\n"
+    ) ||
+    printf "Could not install $line"
 done < snap.list
