@@ -19,7 +19,7 @@ sudo apt install -y redshift redshift-gtk chromium-browser
 echo "Installing Mendeley..." &&
 rm -f mendeleydesktop-latest.deb &&
 wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest -O mendeleydesktop-latest.deb &&
-dpkg -i mendeleydesktop-latest.deb &&
+dpkg -i mendeleydesktop-latest.deb
 ) ||
 (
 sudo apt install -f &&
