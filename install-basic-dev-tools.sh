@@ -1,18 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 sudo apt install -y vim git-cola tmux
 
 # Copy tmux conf
 TMUX_CONF="$HOME/.tmux.conf"
-if [ ! -f $TMUX_CONF  ];then
+if [ ! -f "$TMUX_CONF"  ];then
     echo "Copying .tmux.conf"
-    cp ./.tmux.conf $TMUX_CONF
+    cp ./.tmux.conf "$TMUX_CONF"
 else
     echo "Tmux config file already exists, not copying"
 fi
 
 # Install atom
 ATOM_DEB="/tmp/atom.deb"
-if [ ! -f $ATOM_DEB  ];then
+if [ ! -f $ATOM_DEB  ]; then
     echo "Downloading Atom installer"
     wget https://atom.io/download/deb -O $ATOM_DEB
 else

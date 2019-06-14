@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Install Google Chrome
-
 (
 rm -f /tmp/google-chrome-stable_current_amd64.deb &&
 echo "downloading google chrome latest stable edition" &&
@@ -11,7 +10,6 @@ rm -f /tmp/google-chrome-stable_current_amd64.deb
 ) || (sudo apt install -f && echo "Google Chrome Installed")
 
 # Install RedShift & Chromium Browser
-
 sudo apt install -y redshift redshift-gtk chromium-browser
 
 # Install Mendeley
