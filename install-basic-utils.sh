@@ -1,25 +1,14 @@
 #!/usr/bin/env bash
+set -e
 
-# Install Google Chrome
-(
-rm -f /tmp/google-chrome-stable_current_amd64.deb &&
-echo "downloading google chrome latest stable edition" &&
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/google-chrome-stable_current_amd64.deb &&
-sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb &&
-rm -f /tmp/google-chrome-stable_current_amd64.deb
-) || (sudo apt install -f && echo "Google Chrome Installed")
+echo "Downloading google-chrome latest stable edition"
+CHROME_DEB="/tmp/google-chrome.deb"
+if [ ! -f $CHROME_DEB ]; then
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O $CHROME_DEB
+fi
+sudo dpkg -i $CHROME_DEB || sudo apt install -f
+echo "Done!"
 
-# Install RedShift & Chromium Browser
+echo "Installing RedShift and Chromium Browser"
 sudo apt install -y redshift redshift-gtk chromium-browser
-
-# Install Mendeley
-(
-echo "Installing Mendeley..." &&
-rm -f mendeleydesktop-latest.deb &&
-wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest -O mendeleydesktop-latest.deb &&
-sudo dpkg -i mendeleydesktop-latest.deb
-) ||
-(
-sudo apt install -f &&
-echo "Mendeley Installed"
-)
+echo "Done!"
