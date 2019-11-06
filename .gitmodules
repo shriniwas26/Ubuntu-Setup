@@ -1,0 +1,3 @@
+[submodule "Asus-ZenScreen-Setup/DisplayLink-Debian"]
+	path = Asus-ZenScreen-Setup/DisplayLink-Debian
+	url = https://github.com/AdnanHodzic/displaylink-debian.git
