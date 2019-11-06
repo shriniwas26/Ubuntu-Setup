@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # Install and configure tmux
 echo "Installing tmux..."
 sudo apt install -y tmux
 echo "Copying tmux config..."
 TMUX_CONF="${HOME}/.tmux.conf"
-cp "${CWD}/.tmux.conf" "$TMUX_CONF"
+cp "${SCRIPT_DIR}/../Config-Files/.tmux.conf" "$TMUX_CONF"
 echo "Done!"
 
 echo "Installing and configuring vim..."
