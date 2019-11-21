@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Downloading google-chrome latest stable edition"
-CHROME_DEB="/tmp/google-chrome.deb"
-if [ ! -f $CHROME_DEB ]; then
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O $CHROME_DEB
-fi
-sudo dpkg -i $CHROME_DEB || sudo apt install -f
+BASIC_UTIL_PKGS="grc htop powertop tlp weather-util vlc chromium-browser etckeeper"
+echo "Installing the following packages: ${BASIC_UTIL_PKGS}"
+sudo apt install -y ${BASIC_UTIL_PKGS}
 echo "Done!"
 
-echo "Installing RedShift and Chromium Browser"
-sudo apt install -y redshift redshift-gtk chromium-browser
+echo "Downloading google-chrome latest stable edition"
+CHROME_INSTALLER="/tmp/google-chrome.deb"
+if [ ! -f ${CHROME_INSTALLER} ]; then
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ${CHROME_INSTALLER}
+fi
+sudo dpkg -i ${CHROME_INSTALLER} || sudo apt install -f
 echo "Done!"
